@@ -37,6 +37,8 @@ body
                 justify-content: space-around
                 @include media-screen-between($extra-small-screen-min, $tablet-max)
                     flex-wrap: wrap
+                    padding: 5px
+                    justify-content: baseline
 
                 .card
                     display: flex
@@ -49,7 +51,7 @@ body
                     max-width: 40vw
                     transition: $transition
                     @include media-screen-between($extra-small-screen-min, $tablet-max)
-                        max-width: 70vw
+                        min-width: 90vw
                         margin: 25px 0
 
                     &:hover
@@ -110,6 +112,9 @@ body
                     background-color: $section-background-secondary-color
                     width: 80vw
                     padding: 5em 10em
+                    @include media-screen-between($extra-small-screen-min, $tablet-max)
+                        width: 100vw
+                        padding: 20px
                     h2
                         font-size: 1.5em
                         margin-bottom: 1em
