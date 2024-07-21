@@ -1,0 +1,61 @@
+extends templates/layout
+
+block css_link
+    link(rel="stylesheet" href="dist/css/style_index.min.css")
+
+block main
+    section#presentation 
+        div.jarallax(data-jarallax data-video-src="mp4:assets/videos/background_video_technology.mp4")
+            div.container
+                h1 Dépannage informatique pour les particuliers
+                div.divider
+                h2 Région Arnay-le-Duc
+
+    section#problems
+        div.container
+            .card(data-aos="fade-up")
+                img.card__img(src='assets/imgs/broken_computer.avif', alt='Ordinateur cassé')
+                .card__content
+                    h1.card__header Un ordinateur en panne ?
+                    .card__text-wrapper
+                        p.card__text En cas de mauvaise manipulation de vos données, d’un piratage ou d’une panne matérielle, je peux intervenir dans les plus brefs délais.
+                    button.card__btn Me contacter <span>&rarr;</span>
+
+            .card(data-aos="fade-up")
+                img.card__img(src='assets/imgs/angry.avif', alt='En colère')
+                .card__content
+                    h1.card__header Un manque de connaissance ?
+                    .card__text-wrapper
+                        p.card__text Des soucis pour installer un logiciel ? Une mauvaise compatibilité avec la version de Windows ? Je mets mon expérience à votre service.
+                    button.card__btn Me contacter <span>&rarr;</span>
+    section#parallax 
+        div.jarallax(data-jarallax)
+            img.jarallax-img(src="assets/imgs/computer.avif" alt="")
+            .container
+                h1 Pas de panique, je peux vous aider !
+        
+    section#help
+        .container
+            .card 
+                h2 Disponible du lundi au vendredi dans la région d’Arnay-le-Duc
+                p Je me propose de vous aider à régler la(es) cause(s) des problèmes liés à l’utilisation de votre matériel informatique :
+                ul
+                    li Dépannage informatique PC portable et fixe
+                    li Dépannage informatique tablettes androïd et ipad
+                    li Installation du système d’exploitation et des logiciels
+                    li Montage de PC et évolution
+                    li Conseils
+
+    section#map_and_advice 
+        .container
+            section#signal_spam 
+                h2 Mon conseil anti-spam
+                p Vous êtes envahi de spams, courriels indésirables ou malveillants, pornographiques voire abusifs sans possibilité de se désabonner ?
+                p
+                    | Reportez-les à Signal Spam, site partenaire de la 
+                    a(href="https://www.cnil.fr" target="_blank") CNIL
+                    |  ! Vos rapports aideront la recherche pour lutter contre les spams, ainsi que d’éventuelles suites en justice !
+                a(href="https://www.signal-spam.fr" target="_blank")
+                    .button JE TESTE SIGNAL SPAM
+            section#action
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43437.6352046475!2d4.444687093456275!3d47.12156793727479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f269568199d8ab%3A0x409ce34b31465a0!2s21230%20Arnay-le-Duc!5e0!3m2!1sfr!2sfr!4v1721573119721!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")

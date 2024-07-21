@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  building:
+    build: "./docker/building"
+    volumes:
+      - ".:/tmp"
+    command: /bin/bash -c "./docker/entrypoint.sh"

@@ -1,0 +1,29 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Réconciliez-vous avec votre informatique. Je vous propose la réparation, ou le montage d'un PC personnalisé à vos besoins et à vos exigences d'utilisateur.")
+        meta(name="keywords" content="informatique, dépannage, Arnay le Duc")
+        meta(name="author" content="Didier Couffe")
+        title="Dépannage informatique,Montage PC avec logiciels,Arnay le Duc & proche"
+        link(rel="icon" href="assets/imgs/logo.ico")
+        script(src="dist/js/script.min.js", defer)
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet")
+        link(href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+        block css_link
+    body
+        header
+            include partials/header
+        main
+            block main
+        footer
+            include partials/footer
+            block after-footer 
+        script(src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js")
+        script(src="https://unpkg.com/aos@next/dist/aos.js")
+        block js-script
