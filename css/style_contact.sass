@@ -1,0 +1,56 @@
+@import '_variables'
+@import '_mixin'
+@import '_base'
+
+body
+    main
+        h1
+            text-align: center
+            color: $primary-color
+            margin: 2em 0
+            @include media-screen-between($extra-small-screen-min, $tablet-max)
+                margin: 1em 0.5em
+        form
+            margin: 20px auto
+            width: 50%
+            @include media-screen-between($extra-small-screen-min, $tablet-max)
+                width: 80vw
+
+            .container
+                justify-content: space-between
+                div
+                    width: 40%
+                    &:last-of-type
+                        width: 50%
+
+            label
+                display: block
+                margin-bottom: 10px
+
+            input, textarea, select
+                width: 100%
+                box-sizing: border-box
+                padding: 10px
+                margin-bottom: 20px
+                border: 1px solid #ccc
+                border-radius: 4px
+
+            // input, textarea
+            //     @include media-screen-between($extra-small-screen-min, $tablet-max)
+            //         padding: 10px
+
+            textarea
+                height: 25vh
+                resize: none
+
+            button
+                background-color: #4CAF50
+                color: white
+                padding: 15px 20px
+                border: none
+                border-radius: 4px
+                cursor: pointer
+
+            .note
+                font-style: italic
+                margin-bottom: 10px

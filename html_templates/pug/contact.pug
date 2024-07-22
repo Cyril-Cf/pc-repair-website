@@ -1,6 +1,67 @@
 extends templates/layout
 
 block css_link
-    link(rel="stylesheet" href="dist/css/style_index.min.css")
+    link(rel="stylesheet" href="dist/css/style_contact.min.css")
 
 block main
+    h1 Formulaire de contact
+    form(method='post')
+        .container
+            div 
+                label(for='title') Titre*
+                select#title
+                    option(value='M.') M.
+                    option(value='Mme') Mme
+            div 
+                label(for='name') Votre nom*
+                input#name(type='text', required)
+        
+        label(for='device') Comment désirez-vous être recontacté(e) ?*
+        select#device
+            option(value='email') Par email
+            option(value='phone') Par téléphone
+
+        label(for='email') Votre email*
+        input#email(type='email', required)
+        
+        label(for='phone') Votre téléphone
+        input#phone(type='tel')
+        
+        label(for='device') Votre type d'ordinateur ou tablette
+        select#device
+            option(value='') (non communiqué)
+            option(value='pc-fixe') PC fixe (tour ou desktop)
+            option(value='pc-portable') PC portable
+            option(value='netbook') Netbook
+            option(value='tablette-android') Tablette Android
+            option(value='tablette-ipad') Tablette iPad
+        
+        label(for='os') Votre système d'exploitation
+        select#os
+            option(value='') (non communiqué)
+            optgroup(label='Windows')
+                option(value='windows-11') Windows 11
+                option(value='windows-10') Windows 10
+                option(value='windows-8') Windows 8
+                option(value='windows-7') Windows seven (7)
+                option(value='windows-vista') Windows vista
+                option(value='windows-xp') Windows XP
+            optgroup(label='Android')
+                option(value='android-lt-11') version android 11 ou plus
+                option(value='android-gt-11') version android inférieur à 11
+            optgroup(label='iOS')
+                option(value='ios-lt-14') version ios 14 ou plus
+                option(value='ios-gt-14') version ios inférieur à 14
+        
+        label(for='subject') L'objet de votre demande*
+        select#subject
+            option(value='depannage') Dépannage informatique
+            option(value='installation') Installation de logiciels
+            option(value='montage') Montage de PC
+            option(value='informations') Informations et conseils
+            option(value='autres') Autres...
+            
+        label(for='message') Votre message
+        textarea.message(required)
+        
+        button(type='submit') Envoyer

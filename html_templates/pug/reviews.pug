@@ -1,6 +1,27 @@
 extends templates/layout
 
 block css_link
-    link(rel="stylesheet" href="dist/css/style_index.min.css")
+    link(rel="stylesheet" href="dist/css/style_reviews.min.css")
 
 block main
+    - 
+        const reviews = [{ name: "Corentin de Arnay", date: "16 août 2023 à 11 h 32 min", message: "Merci infiniment pour la rapidité et le professionnalisme du travail ! Je recommanderais sans soucis !", imgSrc: "https://www.gravatar.com/avatar/7ff4b3dceff7a6f6f2824ba2aa50d82f?s=100&d=robohash", imgAlt: "Corentin de Arnay" },
+                        { name: "Alex de Arnay-le-Duc", date: "2 novembre 2020 à 18 h 04 min", message: "Un grand merci pour votre travail et réactivité je vous conseillerai fortement !", imgSrc: "https://www.gravatar.com/avatar/3c71dfaa86844d90d40bb46f78611001?s=100&d=robohash", imgAlt: "Alex de Arnay-le-Duc" },
+                        { name: "Cindy", date: "12 novembre 2019 à 18 h 06 min", message: "Un grand merci à M. Couffe pour avoir dépanné mon problème de wifi. Rapide et efficace, n'hésitez pas à faire appel à ses services.", imgSrc: "https://www.gravatar.com/avatar/1c6efb3561b059ef20a45c401b25b98d?s=100&d=robohash", imgAlt: "Cindy" },
+                        { name: "Christelle de Solonge", date: "7 février 2018 à 19 h 25 min", message: "Un grand merci pour votre rapidité et votre efficacité !! Grace a vous j ai retrouvé un disque dur comme neuf sans oublier mon ordi que vous avez également réparé. C'est parfait, encore bravo!!!", imgSrc: "https://www.gravatar.com/avatar/bd42043716dbb86dc8f42f7c29d38399?s=100&d=robohash", imgAlt: "Christelle de Solonge" },
+                        { name: "julie pause couleur de arnay le duc", date: "13 avril 2017 à 18 h 22 min", message: "un grand grand merci à vous pour votre disponibilité et votre gentillesse . à très bientôt", imgSrc: "https://www.gravatar.com/avatar/9f8d257a6582e3b399d8d568402d2e30?s=100&d=robohash", imgAlt: "julie pause couleur de arnay le duc" },
+                        { name: "andre de arnay le duc", date: "25 janvier 2017 à 20 h 17 min", message: "un grand merci pour cette patience pour tout chasser ces virus dont j'était atteint et pour avoir remis en route mon ancien ordinateur qui devait être irréparables je vous recommande ces service qui sont irréprochables encore un grand merci", imgSrc: "https://www.gravatar.com/avatar/38d43d7488e7c6b299d9dc9e4c7d9277?s=100&d=robohash", imgAlt: "andre de arnay le duc" },
+                        { name: "Thomas de Clomot", date: "24 décembre 2016 à 17 h 50 min", message: "M. Couffe est à l'écoute et soucieux des détails. Puisse ce service de proximité continuer. Merci pour votre réparation.", imgSrc: "https://www.gravatar.com/avatar/270b8a38a6f3b28a6d30155fd3da9376?s=100&d=robohash", imgAlt: "Thomas de Clomot" },
+                        { name: "Caroline et Julien", date: "22 avril 2016 à 20 h 43 min", message: "un grand merci pour l'intervention (un dimanche soir!!!!!) c'est exceptionnel!!!", imgSrc: "https://www.gravatar.com/avatar/87b182f2fa14d53ddf927b2b4e3d8c45?s=100&d=robohash", imgAlt: "Caroline et Julien" },
+                        { name: "Chez Camille de Arnay le Duc", date: "10 février 2016 à 23 h 34 min", message: "Super , Bravo , nous avons grâce à Mr Couffe , un ordi qui fonctionne parfaitement à la réception. De plus serviable et à l'écoute , ce qui est la cerise sur le gâteau !Merci à lui...", imgSrc: "https://www.gravatar.com/avatar/9de6c5e9fd47e10fa18fe8a79606a1e2?s=100&d=robohash", imgAlt: "Chez Camille de Arnay le Duc" },
+                        { name: "Pierre de Lyon", date: "22 janvier 2016 à 19 h 44 min", message: "Super boulot. Il a sauvé mon pc portable que je croyais perdu! Il est comme neuf! Je recommande vivement !", imgSrc: "https://www.gravatar.com/avatar/d70a45e16606d48b87ac32b6c7e6c38b?s=100&d=robohash", imgAlt: "Pierre de Lyon" }];
+    h1 Les derniers avis d'utilisateurs convaincus
+    .container
+        each review in reviews
+            .card
+                .card-image
+                    img(src=review.imgSrc alt=review.imgAlt)
+                .card-content
+                    h3=review.name
+                    h4=review.date
+                    p=review.message
