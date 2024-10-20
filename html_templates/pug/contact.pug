@@ -16,8 +16,8 @@ block main
                 label(for='name') Votre nom*
                 input#name(type='text', required)
         
-        label(for='device') Comment désirez-vous être recontacté(e) ?*
-        select#device
+        label(for='device1') Comment désirez-vous être recontacté(e) ?*
+        select#device1
             option(value='email') Par email
             option(value='phone') Par téléphone
 
@@ -62,6 +62,6 @@ block main
             option(value='autres') Autres...
             
         label(for='message') Votre message
-        textarea.message(required)
+        textarea#message(required)
         
         button(type='submit') Envoyer
